@@ -2,13 +2,13 @@
  "cells": [
   {
    "cell_type": "markdown",
-   "id": "814a3bff",
+   "id": "09f0dc25",
    "metadata": {
     "papermill": {
-     "duration": 0.004242,
-     "end_time": "2025-05-27T23:34:47.941891",
+     "duration": 0.005552,
+     "end_time": "2025-05-27T23:49:24.026383",
      "exception": false,
-     "start_time": "2025-05-27T23:34:47.937649",
+     "start_time": "2025-05-27T23:49:24.020831",
      "status": "completed"
     },
     "tags": []
@@ -20,7 +20,7 @@
     "## 🧠 Business Understanding\n",
     "* Attrition, the loss of employees over time, can damage productivity, morale, and a company’s bottom line. HR teams must understand why employees leave in order to reduce turnover and improve engagement. \n",
     "\n",
-    "* In this analysis, we seek to answer key questions:\n",
+    "* In this analysis, I'll seek to answer key questions:\n",
     "   - What features are most strongly associated with employee attrition?\n",
     "   - Can we build a model to help predict which employees are at risk of leaving?\n",
     "   - How do factors like job satisfaction, income, and workload affect attrition?\n",
@@ -32,21 +32,21 @@
   {
    "cell_type": "code",
    "execution_count": 1,
-   "id": "99e853d7",
+   "id": "edd3f67b",
    "metadata": {
     "_cell_guid": "b1076dfc-b9ad-4769-8c92-a6c4dae69d19",
     "_uuid": "8f2839f25d086af736a60e9eeb907d3b93b6e0e5",
     "execution": {
-     "iopub.execute_input": "2025-05-27T23:34:47.949818Z",
-     "iopub.status.busy": "2025-05-27T23:34:47.949527Z",
-     "iopub.status.idle": "2025-05-27T23:34:51.720937Z",
-     "shell.execute_reply": "2025-05-27T23:34:51.719774Z"
+     "iopub.execute_input": "2025-05-27T23:49:24.037714Z",
+     "iopub.status.busy": "2025-05-27T23:49:24.036905Z",
+     "iopub.status.idle": "2025-05-27T23:49:28.909477Z",
+     "shell.execute_reply": "2025-05-27T23:49:28.908505Z"
     },
     "papermill": {
-     "duration": 3.777233,
-     "end_time": "2025-05-27T23:34:51.722532",
+     "duration": 4.879743,
+     "end_time": "2025-05-27T23:49:28.910995",
      "exception": false,
-     "start_time": "2025-05-27T23:34:47.945299",
+     "start_time": "2025-05-27T23:49:24.031252",
      "status": "completed"
     },
     "tags": []
@@ -91,19 +91,19 @@
   {
    "cell_type": "code",
    "execution_count": 2,
-   "id": "3740aa42",
+   "id": "68f5104f",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2025-05-27T23:34:51.730861Z",
-     "iopub.status.busy": "2025-05-27T23:34:51.730419Z",
-     "iopub.status.idle": "2025-05-27T23:34:51.779491Z",
-     "shell.execute_reply": "2025-05-27T23:34:51.778758Z"
+     "iopub.execute_input": "2025-05-27T23:49:28.922865Z",
+     "iopub.status.busy": "2025-05-27T23:49:28.921833Z",
+     "iopub.status.idle": "2025-05-27T23:49:28.987782Z",
+     "shell.execute_reply": "2025-05-27T23:49:28.986825Z"
     },
     "papermill": {
-     "duration": 0.054821,
-     "end_time": "2025-05-27T23:34:51.781185",
+     "duration": 0.073202,
+     "end_time": "2025-05-27T23:49:28.989201",
      "exception": false,
-     "start_time": "2025-05-27T23:34:51.726364",
+     "start_time": "2025-05-27T23:49:28.915999",
      "status": "completed"
     },
     "tags": []
@@ -330,28 +330,28 @@
   },
   {
    "cell_type": "markdown",
-   "id": "e5e88889",
+   "id": "dbd5a9e6",
    "metadata": {
     "papermill": {
-     "duration": 0.003261,
-     "end_time": "2025-05-27T23:34:51.788397",
+     "duration": 0.00485,
+     "end_time": "2025-05-27T23:49:28.999186",
      "exception": false,
-     "start_time": "2025-05-27T23:34:51.785136",
+     "start_time": "2025-05-27T23:49:28.994336",
      "status": "completed"
     },
     "tags": []
    },
    "source": [
-    "## Data Understanding\n",
+    "## 💡Data Understanding\n",
     "\n",
     "The dataset contains demographic, job-related, and satisfaction-level data on 1,470 IBM employees. Each row represents an individual employee, with the target variable being `Attrition` (Yes/No).\n",
     "\n",
     "Key variable categories include:\n",
     "\n",
-    "- **Personal Demographics**: Age, Gender, MaritalStatus, DistanceFromHome\n",
-    "- **Job Role and Satisfaction**: JobRole, Department, JobSatisfaction, EnvironmentSatisfaction, WorkLifeBalance\n",
-    "- **Performance and Tenure**: MonthlyIncome, YearsAtCompany, PerformanceRating, YearsSinceLastPromotion\n",
-    "- **Training and Growth**: TrainingTimesLastYear, TotalWorkingYears, EducationField\n",
+    "- **Personal Demographics**: `Age`, `Gender`, `MaritalStatus`, `DistanceFromHome`\n",
+    "- **Job Role and Satisfaction**: `JobRole`, `Department`, `JobSatisfaction`, `EnvironmentSatisfaction`, `WorkLifeBalance`\n",
+    "- **Performance and Tenure**: `MonthlyIncome`, `YearsAtCompany`, `PerformanceRating`, `YearsSinceLastPromotion`\n",
+    "- **Training and Growth**: `TrainingTimesLastYear`, `TotalWorkingYears`, `EducationField`\n",
     "\n",
     "This diverse set of features enables both descriptive and predictive analysis to understand patterns behind employee attrition.\n"
    ]
@@ -359,19 +359,19 @@
   {
    "cell_type": "code",
    "execution_count": 3,
-   "id": "2e87154c",
+   "id": "7a66368d",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2025-05-27T23:34:51.796282Z",
-     "iopub.status.busy": "2025-05-27T23:34:51.796031Z",
-     "iopub.status.idle": "2025-05-27T23:34:51.852300Z",
-     "shell.execute_reply": "2025-05-27T23:34:51.851180Z"
+     "iopub.execute_input": "2025-05-27T23:49:29.010455Z",
+     "iopub.status.busy": "2025-05-27T23:49:29.010157Z",
+     "iopub.status.idle": "2025-05-27T23:49:29.083715Z",
+     "shell.execute_reply": "2025-05-27T23:49:29.082623Z"
     },
     "papermill": {
-     "duration": 0.061789,
-     "end_time": "2025-05-27T23:34:51.853644",
+     "duration": 0.081388,
+     "end_time": "2025-05-27T23:49:29.085646",
      "exception": false,
-     "start_time": "2025-05-27T23:34:51.791855",
+     "start_time": "2025-05-27T23:49:29.004258",
      "status": "completed"
     },
     "tags": []
@@ -497,13 +497,13 @@
   },
   {
    "cell_type": "markdown",
-   "id": "32702d95",
+   "id": "d74bf99d",
    "metadata": {
     "papermill": {
-     "duration": 0.003516,
-     "end_time": "2025-05-27T23:34:51.861836",
+     "duration": 0.005021,
+     "end_time": "2025-05-27T23:49:29.096106",
      "exception": false,
-     "start_time": "2025-05-27T23:34:51.858320",
+     "start_time": "2025-05-27T23:49:29.091085",
      "status": "completed"
     },
     "tags": []
@@ -518,19 +518,19 @@
   {
    "cell_type": "code",
    "execution_count": 4,
-   "id": "e350d788",
+   "id": "b8896a6c",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2025-05-27T23:34:51.870210Z",
-     "iopub.status.busy": "2025-05-27T23:34:51.869802Z",
-     "iopub.status.idle": "2025-05-27T23:34:52.045626Z",
-     "shell.execute_reply": "2025-05-27T23:34:52.044727Z"
+     "iopub.execute_input": "2025-05-27T23:49:29.108053Z",
+     "iopub.status.busy": "2025-05-27T23:49:29.107677Z",
+     "iopub.status.idle": "2025-05-27T23:49:29.332620Z",
+     "shell.execute_reply": "2025-05-27T23:49:29.331596Z"
     },
     "papermill": {
-     "duration": 0.181672,
-     "end_time": "2025-05-27T23:34:52.047037",
+     "duration": 0.233025,
+     "end_time": "2025-05-27T23:49:29.334248",
      "exception": false,
-     "start_time": "2025-05-27T23:34:51.865365",
+     "start_time": "2025-05-27T23:49:29.101223",
      "status": "completed"
     },
     "tags": []
@@ -571,19 +571,19 @@
   {
    "cell_type": "code",
    "execution_count": 5,
-   "id": "e6afff76",
+   "id": "8ff8299f",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2025-05-27T23:34:52.056769Z",
-     "iopub.status.busy": "2025-05-27T23:34:52.056488Z",
-     "iopub.status.idle": "2025-05-27T23:34:52.241280Z",
-     "shell.execute_reply": "2025-05-27T23:34:52.240491Z"
+     "iopub.execute_input": "2025-05-27T23:49:29.347287Z",
+     "iopub.status.busy": "2025-05-27T23:49:29.346949Z",
+     "iopub.status.idle": "2025-05-27T23:49:29.614799Z",
+     "shell.execute_reply": "2025-05-27T23:49:29.613766Z"
     },
     "papermill": {
-     "duration": 0.190768,
-     "end_time": "2025-05-27T23:34:52.242516",
+     "duration": 0.275996,
+     "end_time": "2025-05-27T23:49:29.616195",
      "exception": false,
-     "start_time": "2025-05-27T23:34:52.051748",
+     "start_time": "2025-05-27T23:49:29.340199",
      "status": "completed"
     },
     "tags": []
@@ -611,19 +611,19 @@
   {
    "cell_type": "code",
    "execution_count": 6,
-   "id": "67823002",
+   "id": "e671c959",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2025-05-27T23:34:52.254222Z",
-     "iopub.status.busy": "2025-05-27T23:34:52.253932Z",
-     "iopub.status.idle": "2025-05-27T23:34:52.389832Z",
-     "shell.execute_reply": "2025-05-27T23:34:52.389058Z"
+     "iopub.execute_input": "2025-05-27T23:49:29.632122Z",
+     "iopub.status.busy": "2025-05-27T23:49:29.631105Z",
+     "iopub.status.idle": "2025-05-27T23:49:29.823634Z",
+     "shell.execute_reply": "2025-05-27T23:49:29.822822Z"
     },
     "papermill": {
-     "duration": 0.142632,
-     "end_time": "2025-05-27T23:34:52.390862",
+     "duration": 0.201756,
+     "end_time": "2025-05-27T23:49:29.825241",
      "exception": false,
-     "start_time": "2025-05-27T23:34:52.248230",
+     "start_time": "2025-05-27T23:49:29.623485",
      "status": "completed"
     },
     "tags": []
@@ -649,19 +649,19 @@
   {
    "cell_type": "code",
    "execution_count": 7,
-   "id": "0bb8ccef",
+   "id": "14e8ebce",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2025-05-27T23:34:52.402520Z",
-     "iopub.status.busy": "2025-05-27T23:34:52.402287Z",
-     "iopub.status.idle": "2025-05-27T23:34:52.519526Z",
-     "shell.execute_reply": "2025-05-27T23:34:52.518611Z"
+     "iopub.execute_input": "2025-05-27T23:49:29.842152Z",
+     "iopub.status.busy": "2025-05-27T23:49:29.841836Z",
+     "iopub.status.idle": "2025-05-27T23:49:30.009640Z",
+     "shell.execute_reply": "2025-05-27T23:49:30.008773Z"
     },
     "papermill": {
-     "duration": 0.124363,
-     "end_time": "2025-05-27T23:34:52.520643",
+     "duration": 0.178379,
+     "end_time": "2025-05-27T23:49:30.011253",
      "exception": false,
-     "start_time": "2025-05-27T23:34:52.396280",
+     "start_time": "2025-05-27T23:49:29.832874",
      "status": "completed"
     },
     "tags": []
@@ -687,19 +687,19 @@
   },
   {
    "cell_type": "markdown",
-   "id": "e3ca6f88",
+   "id": "bc0b05e3",
    "metadata": {
     "papermill": {
-     "duration": 0.005582,
-     "end_time": "2025-05-27T23:34:52.532648",
+     "duration": 0.008439,
+     "end_time": "2025-05-27T23:49:30.028432",
      "exception": false,
-     "start_time": "2025-05-27T23:34:52.527066",
+     "start_time": "2025-05-27T23:49:30.019993",
      "status": "completed"
     },
     "tags": []
    },
    "source": [
-    "- Attrition is an **imbalanced binary target**, with approximately 83% of employees staying and 17% leaving.\n",
+    "- `Attrition` is an **imbalanced binary target**, with approximately 83% of employees staying and 17% leaving.\n",
     "- Certain job roles like Sales Representative have disproportionately high attrition.\n",
     "- Lower work-life balance scores and lower monthly incomes appear correlated with higher attrition rates.\n"
    ]
@@ -707,19 +707,19 @@
   {
    "cell_type": "code",
    "execution_count": 8,
-   "id": "70c43fff",
+   "id": "acf716d0",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2025-05-27T23:34:52.545916Z",
-     "iopub.status.busy": "2025-05-27T23:34:52.545600Z",
-     "iopub.status.idle": "2025-05-27T23:34:53.702823Z",
-     "shell.execute_reply": "2025-05-27T23:34:53.702091Z"
+     "iopub.execute_input": "2025-05-27T23:49:30.047721Z",
+     "iopub.status.busy": "2025-05-27T23:49:30.047396Z",
+     "iopub.status.idle": "2025-05-27T23:49:31.650807Z",
+     "shell.execute_reply": "2025-05-27T23:49:31.649787Z"
     },
     "papermill": {
-     "duration": 1.168584,
-     "end_time": "2025-05-27T23:34:53.706971",
+     "duration": 1.623937,
+     "end_time": "2025-05-27T23:49:31.660925",
      "exception": false,
-     "start_time": "2025-05-27T23:34:52.538387",
+     "start_time": "2025-05-27T23:49:30.036988",
      "status": "completed"
     },
     "tags": []
@@ -760,19 +760,19 @@
   {
    "cell_type": "code",
    "execution_count": 9,
-   "id": "215bc378",
+   "id": "4ab84732",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2025-05-27T23:34:53.733159Z",
-     "iopub.status.busy": "2025-05-27T23:34:53.732922Z",
-     "iopub.status.idle": "2025-05-27T23:34:54.099560Z",
-     "shell.execute_reply": "2025-05-27T23:34:54.098992Z"
+     "iopub.execute_input": "2025-05-27T23:49:31.701858Z",
+     "iopub.status.busy": "2025-05-27T23:49:31.701489Z",
+     "iopub.status.idle": "2025-05-27T23:49:32.219934Z",
+     "shell.execute_reply": "2025-05-27T23:49:32.218943Z"
     },
     "papermill": {
-     "duration": 0.381098,
-     "end_time": "2025-05-27T23:34:54.100852",
+     "duration": 0.540951,
+     "end_time": "2025-05-27T23:49:32.223164",
      "exception": false,
-     "start_time": "2025-05-27T23:34:53.719754",
+     "start_time": "2025-05-27T23:49:31.682213",
      "status": "completed"
     },
     "tags": []
@@ -811,39 +811,38 @@
   },
   {
    "cell_type": "markdown",
-   "id": "e810d052",
+   "id": "d39f08cd",
    "metadata": {
     "papermill": {
-     "duration": 0.014442,
-     "end_time": "2025-05-27T23:34:54.130342",
+     "duration": 0.022318,
+     "end_time": "2025-05-27T23:49:32.268302",
      "exception": false,
-     "start_time": "2025-05-27T23:34:54.115900",
+     "start_time": "2025-05-27T23:49:32.245984",
      "status": "completed"
     },
     "tags": []
    },
    "source": [
-    "💡 The strongest negative correlations with Attrition include `Age`, `TotalWorkingYears`, and `YearsAtCompany`, suggesting longer-tenured, older employees are more likely to stay. Stronger positive correlations (e.g., `OverTime`, `DistanceFromHome`) may be red flags contributing to turnover risk.\n"
+    "The strongest negative correlations with Attrition include `Age`, `TotalWorkingYears`, and `YearsAtCompany`, suggesting longer-tenured, older employees are more likely to stay. Stronger positive correlations (e.g., `OverTime`, `DistanceFromHome`) may be red flags contributing to turnover risk.\n"
    ]
   },
   {
    "cell_type": "markdown",
-   "id": "93766e5f",
+   "id": "ac796d42",
    "metadata": {
     "papermill": {
-     "duration": 0.014697,
-     "end_time": "2025-05-27T23:34:54.159487",
+     "duration": 0.022877,
+     "end_time": "2025-05-27T23:49:32.314027",
      "exception": false,
-     "start_time": "2025-05-27T23:34:54.144790",
+     "start_time": "2025-05-27T23:49:32.291150",
      "status": "completed"
     },
     "tags": []
    },
    "source": [
-    "## Feature Engineering\n",
+    "## 🤖 Feature Engineering\n",
     "Feature engineering is the process of creating, selecting, or transforming variables to improve model performance and reveal deeper insights. In this attrition project, it's especially important because:\n",
     "\n",
-    "- **It adds domain context:** By combining or transforming features (e.g., calculating \"YearsInRoleRatio\" as `YearsInCurrentRole / YearsAtCompany`), we can better capture an employee’s trajectory or engagement level.\n",
     "- **It reduces noise and redundancy:** Some variables may contain overlapping or irrelevant information. Feature engineering helps highlight what's truly predictive.\n",
     "- **It boosts model accuracy:** Thoughtful transformations can reveal hidden patterns—like how work-life balance, promotion frequency, or distance from home interacts with attrition.\n",
     "- **It supports explainability:** Engineered features often have real-world meaning, which is essential for communicating insights to HR teams and leadership.\n",
@@ -854,19 +853,19 @@
   {
    "cell_type": "code",
    "execution_count": 10,
-   "id": "6714016c",
+   "id": "d3ad83a8",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2025-05-27T23:34:54.189661Z",
-     "iopub.status.busy": "2025-05-27T23:34:54.189438Z",
-     "iopub.status.idle": "2025-05-27T23:34:54.201651Z",
-     "shell.execute_reply": "2025-05-27T23:34:54.201084Z"
+     "iopub.execute_input": "2025-05-27T23:49:32.359058Z",
+     "iopub.status.busy": "2025-05-27T23:49:32.358696Z",
+     "iopub.status.idle": "2025-05-27T23:49:32.375458Z",
+     "shell.execute_reply": "2025-05-27T23:49:32.374635Z"
     },
     "papermill": {
-     "duration": 0.028709,
-     "end_time": "2025-05-27T23:34:54.202732",
+     "duration": 0.041163,
+     "end_time": "2025-05-27T23:49:32.377160",
      "exception": false,
-     "start_time": "2025-05-27T23:34:54.174023",
+     "start_time": "2025-05-27T23:49:32.335997",
      "status": "completed"
     },
     "tags": []
@@ -889,59 +888,57 @@
   },
   {
    "cell_type": "markdown",
-   "id": "cb0d3fc3",
+   "id": "6c742ebd",
    "metadata": {
     "papermill": {
-     "duration": 0.0158,
-     "end_time": "2025-05-27T23:34:54.233990",
+     "duration": 0.022734,
+     "end_time": "2025-05-27T23:49:32.421672",
      "exception": false,
-     "start_time": "2025-05-27T23:34:54.218190",
+     "start_time": "2025-05-27T23:49:32.398938",
      "status": "completed"
     },
     "tags": []
    },
    "source": [
     "## 🤖 Step 4: Model Building\n",
-    "Now that we've explored the data and engineered key features, it's time to build predictive models that can help identify employees likely to leave the company.\n",
+    "Now that I've explored the data and engineered key features, it's time to build predictive models that can help identify employees likely to leave the company.\n",
     "\n",
     "The primary goal is to create a classification model that can predict whether an employee will attrite (`Attrition = Yes`) based on their characteristics and work experience.\n",
     "\n",
-    "We’ll compare the performance of several models:\n",
+    "I’ll compare the performance of several models:\n",
     "- **Logistic Regression** – a baseline model that's easy to interpret.\n",
     "- **Random Forest Classifier** – a powerful ensemble model that handles non-linear relationships well.\n",
     "- **XGBoost Classifier** – a gradient boosting model known for strong performance in classification problems.\n",
     "\n",
     "### ⚙️ Evaluation Strategy\n",
-    "We’ll evaluate model performance using:\n",
+    "I’ll evaluate model performance using:\n",
     "- **Accuracy** – overall correctness\n",
     "- **Precision & Recall** – for class imbalance handling (important since attrition is a minority class)\n",
     "- **F1-Score** – the harmonic mean of precision and recall\n",
     "- **ROC-AUC** – to understand how well the model separates the classes\n",
     "\n",
-    "To ensure reliability, we’ll also use:\n",
+    "To ensure reliability, I’ll also use:\n",
     "- **Train/Test Split**\n",
     "- **Cross-validation (optional)**\n",
-    "- **Confusion Matrix & Classification Report**\n",
-    "\n",
-    "Let’s get started with defining the target variable and splitting the data.\n"
+    "- **Confusion Matrix & Classification Report**"
    ]
   },
   {
    "cell_type": "code",
    "execution_count": 11,
-   "id": "9a901246",
+   "id": "9d9e2538",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2025-05-27T23:34:54.264883Z",
-     "iopub.status.busy": "2025-05-27T23:34:54.264558Z",
-     "iopub.status.idle": "2025-05-27T23:34:54.272002Z",
-     "shell.execute_reply": "2025-05-27T23:34:54.271333Z"
+     "iopub.execute_input": "2025-05-27T23:49:32.467473Z",
+     "iopub.status.busy": "2025-05-27T23:49:32.467151Z",
+     "iopub.status.idle": "2025-05-27T23:49:32.477124Z",
+     "shell.execute_reply": "2025-05-27T23:49:32.475953Z"
     },
     "papermill": {
-     "duration": 0.024099,
-     "end_time": "2025-05-27T23:34:54.272946",
+     "duration": 0.03469,
+     "end_time": "2025-05-27T23:49:32.478576",
      "exception": false,
-     "start_time": "2025-05-27T23:34:54.248847",
+     "start_time": "2025-05-27T23:49:32.443886",
      "status": "completed"
     },
     "tags": []
@@ -966,19 +963,19 @@
   {
    "cell_type": "code",
    "execution_count": 12,
-   "id": "9b7a59f0",
+   "id": "c690a54c",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2025-05-27T23:34:54.303341Z",
-     "iopub.status.busy": "2025-05-27T23:34:54.303106Z",
-     "iopub.status.idle": "2025-05-27T23:34:54.334437Z",
-     "shell.execute_reply": "2025-05-27T23:34:54.333763Z"
+     "iopub.execute_input": "2025-05-27T23:49:32.525938Z",
+     "iopub.status.busy": "2025-05-27T23:49:32.525555Z",
+     "iopub.status.idle": "2025-05-27T23:49:32.552558Z",
+     "shell.execute_reply": "2025-05-27T23:49:32.551485Z"
     },
     "papermill": {
-     "duration": 0.048086,
-     "end_time": "2025-05-27T23:34:54.335815",
+     "duration": 0.052938,
+     "end_time": "2025-05-27T23:49:32.554370",
      "exception": false,
-     "start_time": "2025-05-27T23:34:54.287729",
+     "start_time": "2025-05-27T23:49:32.501432",
      "status": "completed"
     },
     "tags": []
@@ -994,40 +991,40 @@
   },
   {
    "cell_type": "markdown",
-   "id": "04262603",
+   "id": "7db53dc8",
    "metadata": {
     "papermill": {
-     "duration": 0.014689,
-     "end_time": "2025-05-27T23:34:54.366466",
+     "duration": 0.022754,
+     "end_time": "2025-05-27T23:49:32.599566",
      "exception": false,
-     "start_time": "2025-05-27T23:34:54.351777",
+     "start_time": "2025-05-27T23:49:32.576812",
      "status": "completed"
     },
     "tags": []
    },
    "source": [
     "## 🧪 Method 1: Logistic Regression with Class Weights\n",
-    "Logistic regression is a strong baseline model for binary classification tasks. However, since attrition is imbalanced (fewer \"Yes\" than \"No\"), we apply `class_weight='balanced'` to penalize misclassifications of the minority class more heavily.\n",
+    "Logistic regression is a strong baseline model for binary classification tasks. However, since attrition is imbalanced (fewer \"Yes\" than \"No\"), I'll apply `class_weight='balanced'` to penalize misclassifications of the minority class more heavily.\n",
     "\n",
-    "This approach ensures the model treats both classes fairly. After fitting the model, we evaluate its performance and extract feature importance based on the model coefficients.\n"
+    "This approach ensures the model treats both classes fairly. After fitting the model, I'll evaluate its performance and extract feature importance based on the model coefficients.\n"
    ]
   },
   {
    "cell_type": "code",
    "execution_count": 13,
-   "id": "4e0df3ea",
+   "id": "d9514003",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2025-05-27T23:34:54.397578Z",
-     "iopub.status.busy": "2025-05-27T23:34:54.397347Z",
-     "iopub.status.idle": "2025-05-27T23:34:54.755918Z",
-     "shell.execute_reply": "2025-05-27T23:34:54.755269Z"
+     "iopub.execute_input": "2025-05-27T23:49:32.646052Z",
+     "iopub.status.busy": "2025-05-27T23:49:32.645674Z",
+     "iopub.status.idle": "2025-05-27T23:49:33.325076Z",
+     "shell.execute_reply": "2025-05-27T23:49:33.323998Z"
     },
     "papermill": {
-     "duration": 0.375538,
-     "end_time": "2025-05-27T23:34:54.756968",
+     "duration": 0.705106,
+     "end_time": "2025-05-27T23:49:33.327073",
      "exception": false,
-     "start_time": "2025-05-27T23:34:54.381430",
+     "start_time": "2025-05-27T23:49:32.621967",
      "status": "completed"
     },
     "tags": []
@@ -1106,13 +1103,13 @@
   },
   {
    "cell_type": "markdown",
-   "id": "f4db4958",
+   "id": "4da406bd",
    "metadata": {
     "papermill": {
-     "duration": 0.016586,
-     "end_time": "2025-05-27T23:34:54.790898",
+     "duration": 0.023842,
+     "end_time": "2025-05-27T23:49:33.376726",
      "exception": false,
-     "start_time": "2025-05-27T23:34:54.774312",
+     "start_time": "2025-05-27T23:49:33.352884",
      "status": "completed"
     },
     "tags": []
@@ -1121,25 +1118,25 @@
     "## 🌳 Method 2: Random Forest Classifier\n",
     "Random Forest is an ensemble learning method that builds multiple decision trees and merges their results for more robust and accurate predictions. It’s particularly useful for capturing nonlinear relationships and handling datasets with both numerical and categorical variables.\n",
     "\n",
-    "This method is less sensitive to feature scaling and naturally handles class imbalance to some extent, although tuning hyperparameters can further improve this. After training, we evaluate its performance and examine feature importance based on mean decrease in impurity across all trees."
+    "This method is less sensitive to feature scaling and naturally handles class imbalance to some extent, although tuning hyperparameters can further improve this. After training, I'll evaluate its performance and examine feature importance based on mean decrease in impurity across all trees."
    ]
   },
   {
    "cell_type": "code",
    "execution_count": 14,
-   "id": "b0011355",
+   "id": "45288e10",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2025-05-27T23:34:54.825493Z",
-     "iopub.status.busy": "2025-05-27T23:34:54.825246Z",
-     "iopub.status.idle": "2025-05-27T23:34:55.324886Z",
-     "shell.execute_reply": "2025-05-27T23:34:55.324175Z"
+     "iopub.execute_input": "2025-05-27T23:49:33.428187Z",
+     "iopub.status.busy": "2025-05-27T23:49:33.427583Z",
+     "iopub.status.idle": "2025-05-27T23:49:34.128305Z",
+     "shell.execute_reply": "2025-05-27T23:49:34.127253Z"
     },
     "papermill": {
-     "duration": 0.518495,
-     "end_time": "2025-05-27T23:34:55.326079",
+     "duration": 0.728869,
+     "end_time": "2025-05-27T23:49:34.129971",
      "exception": false,
-     "start_time": "2025-05-27T23:34:54.807584",
+     "start_time": "2025-05-27T23:49:33.401102",
      "status": "completed"
     },
     "tags": []
@@ -1218,13 +1215,13 @@
   },
   {
    "cell_type": "markdown",
-   "id": "c8af7a88",
+   "id": "6f09f3d5",
    "metadata": {
     "papermill": {
-     "duration": 0.017401,
-     "end_time": "2025-05-27T23:34:55.361741",
+     "duration": 0.025542,
+     "end_time": "2025-05-27T23:49:34.182514",
      "exception": false,
-     "start_time": "2025-05-27T23:34:55.344340",
+     "start_time": "2025-05-27T23:49:34.156972",
      "status": "completed"
     },
     "tags": []
@@ -1233,25 +1230,25 @@
     "## ⚡ Method 3: XGBoost Classifier\n",
     "XGBoost (Extreme Gradient Boosting) is a powerful and efficient implementation of gradient-boosted decision trees. It is often the go-to algorithm in structured data competitions due to its accuracy, speed, and ability to handle class imbalance with built-in techniques.\n",
     "\n",
-    "XGBoost uses boosting to sequentially improve weak learners, focusing on difficult-to-classify samples. In this step, we fit the model, assess performance, and extract feature importance from the trained boosting ensemble."
+    "XGBoost uses boosting to sequentially improve weak learners, focusing on difficult-to-classify samples. In this step, I'll fit the model, assess performance, and extract feature importance from the trained boosting ensemble."
    ]
   },
   {
    "cell_type": "code",
    "execution_count": 15,
-   "id": "c3e2345e",
+   "id": "15dbb1b3",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2025-05-27T23:34:55.399025Z",
-     "iopub.status.busy": "2025-05-27T23:34:55.398760Z",
-     "iopub.status.idle": "2025-05-27T23:34:55.789747Z",
-     "shell.execute_reply": "2025-05-27T23:34:55.789135Z"
+     "iopub.execute_input": "2025-05-27T23:49:34.239130Z",
+     "iopub.status.busy": "2025-05-27T23:49:34.238786Z",
+     "iopub.status.idle": "2025-05-27T23:49:34.787374Z",
+     "shell.execute_reply": "2025-05-27T23:49:34.786404Z"
     },
     "papermill": {
-     "duration": 0.410951,
-     "end_time": "2025-05-27T23:34:55.790959",
+     "duration": 0.578647,
+     "end_time": "2025-05-27T23:49:34.789130",
      "exception": false,
-     "start_time": "2025-05-27T23:34:55.380008",
+     "start_time": "2025-05-27T23:49:34.210483",
      "status": "completed"
     },
     "tags": []
@@ -1330,13 +1327,13 @@
   },
   {
    "cell_type": "markdown",
-   "id": "4063a047",
+   "id": "ff0c29bf",
    "metadata": {
     "papermill": {
-     "duration": 0.018366,
-     "end_time": "2025-05-27T23:34:55.829004",
+     "duration": 0.028193,
+     "end_time": "2025-05-27T23:49:34.845319",
      "exception": false,
-     "start_time": "2025-05-27T23:34:55.810638",
+     "start_time": "2025-05-27T23:49:34.817126",
      "status": "completed"
     },
     "tags": []
@@ -1367,18 +1364,18 @@
     "## 📌 Final Recommendation:\n",
     "- Use **Logistic Regression** for quick insights and when model explainability is key.\n",
     "- Use **Random Forest** for exploring data patterns or building ensembles.\n",
-    "- Use **XGBoost** for optimizing for performance if you are comfortable tuning model parameters."
+    "- Use **XGBoost** for optimizing for performance if comfortable tuning model parameters."
    ]
   },
   {
    "cell_type": "markdown",
-   "id": "6947fe1c",
+   "id": "54c288f6",
    "metadata": {
     "papermill": {
-     "duration": 0.018296,
-     "end_time": "2025-05-27T23:34:55.866032",
+     "duration": 0.027212,
+     "end_time": "2025-05-27T23:49:34.901232",
      "exception": false,
-     "start_time": "2025-05-27T23:34:55.847736",
+     "start_time": "2025-05-27T23:49:34.874020",
      "status": "completed"
     },
     "tags": []
@@ -1448,14 +1445,14 @@
   },
   "papermill": {
    "default_parameters": {},
-   "duration": 12.261829,
-   "end_time": "2025-05-27T23:34:56.503464",
+   "duration": 16.661067,
+   "end_time": "2025-05-27T23:49:35.752657",
    "environment_variables": {},
    "exception": null,
    "input_path": "__notebook__.ipynb",
    "output_path": "__notebook__.ipynb",
    "parameters": {},
-   "start_time": "2025-05-27T23:34:44.241635",
+   "start_time": "2025-05-27T23:49:19.091590",
    "version": "2.6.0"
   }
  },
