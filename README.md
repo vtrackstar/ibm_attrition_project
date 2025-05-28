@@ -1,17 +1,32 @@
 # 🔍 Predicting Employee Attrition with Machine Learning
+This portfolio project analyzes IBM’s fictional HR dataset to uncover the drivers of employee attrition and develop a predictive model. The goal is to demonstrate how data-driven insights can support strategic HR decisions and reduce churn.
 
-This project explores employee attrition using IBM's fictional dataset. I used Logistic Regression, Random Forest, and XGBoost to identify key factors behind employee churn, and recommended actionable steps HR teams could take.
+## 🎯 Project Objectives
+- Identify top predictors of employee attrition using EDA and feature engineering.
+- Compare multiple classification models: Logistic Regression, Random Forest, and XGBoost.
+- Translate findings into actionable business recommendations for HR stakeholders.
 
-## 🚀 Goals
-- Understand what factors drive attrition
-- Test multiple classification models
-- Provide actionable business recommendations
+## 📊 Key Takeaways
+- **Top predictors:** Overtime, Job Role, and Distance from Home were consistently influential.
+- **Model performance:** XGBoost achieved the best balance between precision and recall, especially for predicting the minority class (employees who left).
+- **Recommendations:** Address overtime policy, monitor high-risk roles, and consider commute impact in retention efforts.
 
-## 📈 Key Findings
-- Overtime, Job Role, and Distance from Home strongly predict attrition.
-- XGBoost achieved the best recall on the minority class.
-- Recommendations include improving work-life balance and compensation for at-risk roles.
+## 💼 Business Impact
+- Understanding the "why" behind attrition helps organizations:
+   - Proactively retain top talent
+   - Improve employee engagement
+   - Reduce replacement and onboarding costs
 
-## 🛠️ Tools Used
-- Python (Pandas, Scikit-Learn, XGBoost, Seaborn, Matplotlib)
-- Jupyter Notebook
+## 🛠️ Tools & Technologies
+- **Languages/Libraries:** Python, Pandas, Scikit-learn, XGBoost, Seaborn, Matplotlib
+- **Platform:** Jupyter Notebook (exported as PDF for clean presentation)
+
+## 📁 Files Included
+- `Attrition_Modeling_Notebook.ipynb`: Full analysis and modeling process
+- `ibm_attrition_clean.pdf`: Presentation-ready version of the notebook
+- `WA_Fn-UseC_-HR-Employee-Attrition.csv`: Dataset used for project
+- `README.md`: Overview and project summary
+
+---
+
+> 🧠 *This project showcases my skills in data wrangling, exploratory analysis, machine learning, and business communication — the same blend of skills I aim to bring to a data analyst or business analyst role.*
