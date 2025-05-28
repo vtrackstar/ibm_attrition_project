@@ -23,7 +23,8 @@ This portfolio project analyzes IBM’s fictional HR dataset to uncover the driv
 
 ## 📁 Files Included
 - `Attrition_Modeling_Notebook.ipynb`: Full analysis and modeling process
-- `ibm_attrition_clean.pdf`: Presentation-ready version of the notebook
+- `ibm_attrition_clean.pdf`: Presentation-ready PDF version of the notebook
+- `Employee_Attrition_Presentation.pdf`: Google Slideshow Presentation of Notebook
 - `WA_Fn-UseC_-HR-Employee-Attrition.csv`: Dataset used for project
 - `README.md`: Overview and project summary
 
